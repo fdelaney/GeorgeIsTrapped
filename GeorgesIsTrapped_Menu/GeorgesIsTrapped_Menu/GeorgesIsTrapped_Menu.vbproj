@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D7DEE10-D9E9-400B-9AB9-92EC7B3BD7CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>GeorgesIsTrapped_Menu.My.MyApplication</StartupObject>
+    <RootNamespace>GeorgesIsTrapped_Menu</RootNamespace>
+    <AssemblyName>GeorgesIsTrapped_Menu</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GeorgesIsTrapped_Menu.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GeorgesIsTrapped_Menu.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Board.vb" />
+    <Compile Include="fonctionLabelInteraction.vb" />
+    <Compile Include="George.Designer.vb">
+      <DependentUpon>George.vb</DependentUpon>
+    </Compile>
+    <Compile Include="George.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuAbout.Designer.vb">
+      <DependentUpon>menuAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="menuAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuOptions.Designer.vb">
+      <DependentUpon>menuOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="menuOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuPrincipal.Designer.vb">
+      <DependentUpon>menuPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tuiles.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="George.resx">
+      <DependentUpon>George.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuAbout.resx">
+      <DependentUpon>menuAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuOptions.resx">
+      <DependentUpon>menuOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuPrincipal.resx">
+      <DependentUpon>menuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brique.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gazon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeorgesDos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeorgesDroite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeorgesFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeorgesGauche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldiers video games guns humor gears of war funny 2560x1440 wallpaper_www.knowledgehi.com_21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\8 Bit Weapon - Chip On Your Shoulder.wav" />
+    <None Include="Resources\Kola_Kid_-_castle.wav" />
+    <None Include="Resources\8_Bit_Weapon_-_Chip_On_Your_Shoulder.wav" />
+    <Content Include="Resources\Crystal Castles - Crimewave %28David Wolf Edit%29.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
